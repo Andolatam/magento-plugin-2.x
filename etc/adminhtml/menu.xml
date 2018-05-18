@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Improntus_Ando::menuPrincipal" title="Envíos Ando" module="Magento_Config" sortOrder="70" resource="Magento_Config::brand"/>
+        <add id="Improntus_Ando::settings" title="Configuración" module="Improntus_Ando" parent="Improntus_Ando::menuPrincipal" action="adminhtml/system_config/edit/section/shipping/webservice_ando" resource="Improntus_Ando::settings" sortOrder="120"/>
+        <add id="Improntus_Ando::carriers" title="Métodos de envío" module="Improntus_Ando" parent="Improntus_Ando::menuPrincipal" action="adminhtml/system_config/edit/section/carriers/ando_bicicleta" resource="Improntus_Ando::carriers" sortOrder="130"/>
+        <!--<add id="Improntus_Ando::cuenta_corriente" title="Cuenta corriente" module="Improntus_Ando" parent="Improntus_Ando::menuPrincipal" action="ando/cuentacorriente/index" resource="Improntus_Ando::cuenta_corriente" sortOrder="140"/>-->
+    </menu>
+</config>

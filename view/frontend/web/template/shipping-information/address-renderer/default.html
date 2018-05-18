@@ -1,0 +1,8 @@
+<!-- ko if: (visible()) -->
+    <!-- ko text: address().prefix --><!-- /ko --> <!-- ko text: address().firstname --><!-- /ko -->
+    <!-- ko text: address().lastname --><!-- /ko --> <!-- ko text: address().suffix --><!-- /ko --><br/>
+    <!-- ko text: address().street --><!-- /ko --> <!-- ko text: getAltura() --><!-- /ko --><!-- ko text: getPiso() --><!-- /ko --><!-- ko text: getDepartamento() --><!-- /ko --><br/>
+    <!-- ko text: address().city --><!-- /ko -->, <!-- ko text: address().region --><!-- /ko --> <!-- ko text: address().postcode --><!-- /ko --><br/>
+    <!-- ko text: getCountryName(address().countryId) --><!-- /ko --><br/>
+    <!-- ko text: address().telephone --><!-- /ko --><br/>
+<!-- /ko -->

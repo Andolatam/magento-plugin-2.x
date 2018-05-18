@@ -1,0 +1,15 @@
+.admin__menu #menu-improntus-ando-menuprincipal > a:before  {
+    opacity: 0.65;
+    content: '';
+    font-size: 2.4rem;
+    display: block;
+    position: relative;
+    top: -0.3rem;
+    width: 35px;
+    height: 22px;
+    background: url('../images/logo-ando-white.png');
+    background-size: 35px 22px;
+    margin: 0 auto;
+}
+
+.admin__menu #menu-improntus-ando-menuprincipal:hover > a:before {opacity: 1;}
