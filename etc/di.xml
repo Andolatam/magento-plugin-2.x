@@ -9,7 +9,4 @@
     <type name="Magento\Checkout\Model\PaymentInformationManagement">
         <plugin name="Improntus_Ando::PaymentInformationManagement" sortOrder="10" type="Improntus\Ando\Plugin\Checkout\Model\PaymentInformationManagement"/>
     </type>
-    <type name="Magento\Checkout\Model\ShippingInformationManagement">
-        <plugin name="Improntus_Ando::ShippingInformationManagementPlugin" type="Improntus\Ando\Plugin\Checkout\ShippingInformationManagement" sortOrder="10"/>
-    </type>
 </config>
