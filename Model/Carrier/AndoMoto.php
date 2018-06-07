@@ -314,12 +314,12 @@ class AndoMoto extends AbstractCarrierOnline implements CarrierInterface
 
             $costoEnvio = $webservice->getShippingQuote(
             [
-                'shipFrom_province'      => $this->_scopeConfig->getValue('shipping/ando_webservice/direccion/provincia'),
-                'shipFrom_addressStreet' => $this->_scopeConfig->getValue('shipping/ando_webservice/direccion/calle'),
-                'shipFrom_addressNumber' => $this->_scopeConfig->getValue('shipping/ando_webservice/direccion/numero'),
-                'shipFrom_city'          => $this->_scopeConfig->getValue('shipping/ando_webservice/direccion/ciudad'),
+                'shipFrom_province'      => $this->_scopeConfig->getValue('shipping/ando_webservice/direccion/provincia',\Magento\Store\Model\ScopeInterface::SCOPE_STORE),
+                'shipFrom_addressStreet' => $this->_scopeConfig->getValue('shipping/ando_webservice/direccion/calle',\Magento\Store\Model\ScopeInterface::SCOPE_STORE),
+                'shipFrom_addressNumber' => $this->_scopeConfig->getValue('shipping/ando_webservice/direccion/numero',\Magento\Store\Model\ScopeInterface::SCOPE_STORE),
+                'shipFrom_city'          => $this->_scopeConfig->getValue('shipping/ando_webservice/direccion/ciudad',\Magento\Store\Model\ScopeInterface::SCOPE_STORE),
                 'shipFrom_country'       => 'Argentina',
-                'startSpecialInstructions'=> $this->_scopeConfig->getValue('shipping/ando_webservice/direccion/observaciones'),
+                'startSpecialInstructions'=> $this->_scopeConfig->getValue('shipping/ando_webservice/direccion/observaciones',\Magento\Store\Model\ScopeInterface::SCOPE_STORE),
                 'shipTo_firstName'       => $nombre,
                 'shipTo_lastName'        => $apellido,
                 'shipTo_email'           => $helper->getQuote()->getCustomerEmail(),
@@ -337,7 +337,7 @@ class AndoMoto extends AbstractCarrierOnline implements CarrierInterface
                 'shippingMethod'         => 'MOTO',
                 'digitalSignature'       => false,
                 'currency'               => 'ARS',
-                'promocode'              => null
+                'promocode'              => $this->_scopeConfig->getValue('shipping/ando_webservice/promocode',\Magento\Store\Model\ScopeInterface::SCOPE_STORE)
             ]);
 
             if($costoEnvio)

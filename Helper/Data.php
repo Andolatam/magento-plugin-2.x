@@ -88,7 +88,7 @@ class Data extends AbstractHelper
      */
     public function getWebserviceUser()
     {
-        return $this->_scopeConfig->getValue('shipping/ando_webservice/user');
+        return $this->_scopeConfig->getValue('shipping/ando_webservice/user',\Magento\Store\Model\ScopeInterface::SCOPE_STORE);
     }
 
     /**
@@ -96,7 +96,7 @@ class Data extends AbstractHelper
      */
     public function getWebservicePass()
     {
-        return $this->_scopeConfig->getValue('shipping/ando_webservice/pass');
+        return $this->_scopeConfig->getValue('shipping/ando_webservice/pass',\Magento\Store\Model\ScopeInterface::SCOPE_STORE);
     }
 
     /**
@@ -104,7 +104,7 @@ class Data extends AbstractHelper
      */
     public function getApiUrl()
     {
-        return $this->_scopeConfig->getValue('shipping/ando_webservice/url');
+        return $this->_scopeConfig->getValue('shipping/ando_webservice/url',\Magento\Store\Model\ScopeInterface::SCOPE_STORE);
     }
 
     /**
@@ -123,7 +123,7 @@ class Data extends AbstractHelper
      */
     public function getPesoMaximo($carrier)
     {
-        return $this->_scopeConfig->getValue("carriers/$carrier/max_package_weight");
+        return $this->_scopeConfig->getValue("carriers/$carrier/max_package_weight",\Magento\Store\Model\ScopeInterface::SCOPE_STORE);
     }
 
     /**

@@ -66,6 +66,9 @@
                     <label>Contraseña</label>
                     <validate>required-entry</validate>
                 </field>
+                <field id="promocode" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Promo code Ando</label>
+                </field>
                 <group id="direccion" translate="label" type="text" sortOrder="400" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Dirección de despacho</label>
                     <field id="calle" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
