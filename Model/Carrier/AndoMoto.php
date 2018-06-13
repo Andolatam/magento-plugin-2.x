@@ -281,7 +281,19 @@ class AndoMoto extends AbstractCarrierOnline implements CarrierInterface
             if(isset($address['address']) && isset($address['address']['custom_attributes']))
             {
                 $altura =  $address['address']['custom_attributes']['altura'];
+
+                if(is_array($altura))
+                {
+                    $altura = $altura['value'];
+                }
+
                 $observaciones = $address['address']['custom_attributes']['observaciones'];
+
+                if(is_array($observaciones))
+                {
+                    $observaciones = $observaciones['value'];
+                }
+
                 $nombre = $address['address']['firstname'];
                 $apellido = $address['address']['lastname'];
                 //$email = $address['address']['email']; //$address->getEmail();
