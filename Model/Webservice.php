@@ -72,14 +72,17 @@ class Webservice
      */
     public function getToken()
     {
-        $loginParams = "email={$this->_user}&password={$this->_pass}"; //
-        $curl = curl_init($this->_apiUrl.'login/?'.$loginParams);
+        $curl = curl_init($this->_apiUrl.'login/');
 
         curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'POST');
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_MAXREDIRS, 10);
         curl_setopt($curl, CURLOPT_TIMEOUT, 30);
         curl_setopt($curl, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, "{\n\t\"email\": \"{$this->_user}\",\n\t\"password\": \"{$this->_pass}\"\n}");
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+            "Content-Type: application/json"
+        ));
 
         $response = curl_exec($curl);
 
